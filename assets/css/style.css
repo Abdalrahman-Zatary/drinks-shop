@@ -1,0 +1,378 @@
+/* Start Navbar */
+.navbar {
+  background-color: rgba(0 0 0 / 60%);
+  position: relative;
+  width: 100%;
+  z-index: 999;
+  color: white;
+}
+.navbar .container {
+  height: 71px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .logo img {
+  background-color: var(--flavor-color);
+  border-radius: 50%;
+}
+.navbar .logo h2 {
+  margin-left: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 24px;
+}
+.navbar .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .links li {
+  padding: 25px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+.navbar .links li a {
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+.navbar .links a span {
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+  transition-delay: calc(var(--i) * 0.1s);
+}
+
+.navbar .links a:hover span {
+  transform: translateY(-3px);
+  color: var(--flavor-color, #EA3D41);
+}
+.navbar .tuggal {
+  color: #eee;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.navbar .tuggal:hover {
+  color: var(--flavor-color);
+}
+.navbar .account {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.navbar .account .cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+.navbar .account .cart-icon i {
+  font-size: 23px;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.navbar .account .cart-icon i:hover {
+  color: var(--flavor-color);
+}
+.navbar .account .cart-icon .padget {
+  background-color: var(--flavor-color);
+  color: white;
+  position: absolute;
+  left: 12px;
+  top: 0;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 14px;
+  height: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-weight: bold;
+}
+.navbar .account .btn {
+  color: var(--flavor-color);
+  font-weight: bold;
+  font-size: 18px;
+  padding: 7px 10px;
+  border-radius: 8px;
+  background-color: #eee;
+  transition: 0.5s;
+}
+.navbar .account .btn:hover {
+  background-color: var(--flavor-color);
+  color: #eee;
+}
+/* End Navbar */
+/* Start Headar */
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  margin-top: -71px;
+}
+.carousel .list {
+  width: 100%;
+  height: 100%;
+}
+.carousel .list .item {
+  width: 100%;
+  height: 100%;
+  background-color: var(--background);
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: none;
+}
+.carousel .list .item img.fruit {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  pointer-events: none;
+}
+.carousel .list .item .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 160px;
+  color: #eee;
+  font-weight: bold;
+  font-family: system-ui;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.carousel .list .item.active {
+  display: block;
+}
+.item.hidden {
+  display: block;
+  pointer-events: none;
+  background-color: transparent;
+  z-index: 1;
+}
+.carousel .mockup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  --left: 0%;
+  transform: translate(-50%, -50%);
+  height: var(--height-mockup);
+  width: var(--width-mockup);
+  background: url(../images/mockup.png) 0 0 no-repeat, url(../images/horf.jpg) var(--left) 0;
+  background-size: auto 100%;
+  background-blend-mode: multiply;
+  mask-image: url(../images/mockup.png);
+  mask-repeat: no-repeat;
+  mask-size: auto 100%;
+  transition: background 0.5s;
+}
+.carousel .leaves {
+  position: absolute;
+  top: calc(50% - (var(--height-mockup) / 1.7));
+  left: calc(50% + (var(--width-mockup) / 5));
+  width: 170px;
+  height: 170px;
+  background-image: url(../images/leaves.png);
+  background-size: 100%;
+}
+.carousel .shadow {
+  width: var(--width-mockup);
+  height: 100px;
+  background-color: #0008;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% + (var(--height-mockup) / 2));
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(20px);
+}
+.carousel .flavor-nav {
+  position: fixed;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  z-index: 99;
+  pointer-events: auto;
+}
+.carousel .flavor-nav .dot {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background-color: var(--background);
+  cursor: pointer;
+  transition: transform 0.5s ease, background 0.5s ease;
+  box-shadow: 0 8px 15px rgba(0 0 0 / 40%);
+}
+.carousel .flavor-nav .dot:hover {
+  box-shadow: 2px 4px 10px rgba(0 0 0 / 50%);
+  transform: scale(1.15);
+}
+.carousel .flavor-nav .dot.active {
+  transform: scale(1.2);
+  background-color: rgba(0 0 0 / 5%);
+}
+/* Start Animation */
+@keyframes toActive {
+  from { 
+    top: 100%; 
+    opacity: 0; 
+  }
+}
+@keyframes toOut {
+  from { 
+    top: 50%; 
+    opacity: 1; 
+  }
+}
+@keyframes toActivePrev { 
+  from { 
+    top: 0; 
+    opacity: 0; 
+  } 
+}
+.item.active img.fruit { 
+  animation: toActive 0.5s ease-in-out 1; 
+}
+.item.hidden img.fruit { 
+  animation: toOut 0.8s ease-in-out 1; 
+  top: -100%;
+  opacity: 0;
+}
+.item.active .content { 
+  animation: toActive 0.8s ease-in-out 1; 
+}
+.item.hidden .content { 
+  opacity: 0; 
+}
+.carousel.right .item.active img.fruit { 
+  animation: toActivePrev 0.5s ease-in-out 1; 
+}
+.carousel.right .item.hidden img.fruit { 
+  animation: toOut 0.8s ease-in-out 1; 
+  top: 100%; 
+  opacity: 0; 
+}
+.carousel.right .item.active .content { 
+  animation: toActivePrev 0.8s ease-in-out 1; 
+}
+/* End Animation */
+/* End Headar */
+/* pointer-events 
+white-space
+background-blend-mode
+*/
+/* Respounsev */
+/* Start Navbar Respounsev */
+@media (max-width: 991px) {
+  .navbar .logo h2 {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+  .navbar .logo img {
+    width: 35px;
+  }
+  .navbar .links li {
+    padding: 25px 15px;
+    font-size: 16px;
+  }
+  .navbar .account .cart-icon i {
+    margin-right: 35px;
+    font-size: 20px;
+  }
+  .navbar .account .cart-icon .padget  {
+    top: -2px;
+  }
+  .navbar .account .btn {
+    padding: 5px 8px;
+    border-radius: 6px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar .tuggal {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .navbar .links {
+    display: none;
+  }
+  .navbar .tuggal {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-46%);
+    z-index: 99999;
+  }
+  .navbar .tugga + .links {
+    opacity: 0;
+  } 
+  .navbar .tuggal:hover + .links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px;
+    position: absolute;
+    top: -500%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0 0 0 / 50%);
+    text-align: center;
+    opacity: 0;
+    animation: dropList 1s ease forwards;
+  }
+  @keyframes dropList {
+    to {
+      top: 100%;
+      opacity: 1;
+    }
+  }
+  .navbar .links li:not(:last-of-type) {
+    width: 90%;
+    border-bottom: 1px solid #ccc;
+  }
+  .navbar .links li a {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 10px !important;
+  }
+  .navbar .account .btn {
+    display: none;
+  }
+}
+/* End Navbar Respounsev */
+/* Start Header Respounsev */
+@media (max-width: 767px) {
+  .carousel .list .item img.fruit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .carousel .list .item .content {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  .carousel .flavor-nav .dot {
+    width: 40px;
+    height: 40px;
+  }
+}
+/* End Header Respounsev */
