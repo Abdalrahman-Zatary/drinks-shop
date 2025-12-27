@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Base -->
+    <link rel="stylesheet" href="./assets/css/base/varibels.css">
+
+    <!-- Libs -->
+    <link rel="stylesheet" href="./assets/css/libs/normalize.css">
+    <link rel="stylesheet" href="./assets/css/libs/all.min.css">
+
+    <!-- Googl Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- Main CSS Fill -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Start Navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">
+          <img width="45px" src="./assets/images/logo.png" alt="">
+          <h2>Drinks</h2>
+        </div>
+        <i class="fas fa-bars tuggal"></i>
+        <ul class="links">
+          <li class="active"><a href="#">Houm</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Offers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="account">
+          <div class="cart-icon">
+            <i class="far fa-clipboard"></i>
+            <div class="padget">3</div>
+          </div>
+          <a class="btn" href="#">Login</a>
+        </div>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Start Header -->
+    <header class="carousel">
+      <div class="list">
+        <article class="item active" style="--background: #EA3D41">
+          <div class="content">Strawberry</div>
+          <img class="fruit" src="./assets/images/fruit-strawberry.png" alt="">
+        </article>
+        <article class="item" style="--background: #2D5643">
+          <div class="content">Avocado</div>
+          <img class="fruit" src="./assets/images/fruit-avocado.png" alt="">
+        </article>
+        <article class="item" style="--background: #E7A043">
+          <div class="content">Orange</div>
+          <img class="fruit" src="./assets/images/fruit-orange.png" alt="">
+        </article>
+        <article class="item" style="--background: #3B2E6D">
+          <div class="content">Blueberry</div>
+          <img class="fruit" src="./assets/images/fruit-blueberry.png" alt="">
+        </article>
+        <article class="item" style="--background: #FF8F46">
+          <div class="content">Mango</div>
+          <img class="fruit" src="./assets/images/fruit-manga.png" alt="">
+        </article>
+      </div>
+      <div class="leaves"></div>
+      <div class="mockup"></div>
+      <div class="shadow"></div>
+      <div class="flavor-nav" aria-hidden="false">
+        <button class="dot active" style="--background: #EA3D41" data-index="0" aria-label="Strawberry"></button>
+        <button class="dot" style="--background: #2D5643" data-index="1" aria-label="Avocado"></button>
+        <button class="dot" style="--background: #E7A043" data-index="2" aria-label="Orange"></button>
+        <button class="dot" style="--background: #3B2E6D" data-index="3" aria-label="Blueberry"></button>
+        <button class="dot" style="--background: #FF8F46" data-index="4" aria-label="Tropical Mango"></button>
+      </div>
+    </header>
+    <!-- End Header -->
+    
+    <!-- Mine File JS -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
